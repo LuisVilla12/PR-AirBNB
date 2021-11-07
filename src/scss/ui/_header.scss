@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.notavif.notwebp .header {
+    @include m.bgFondo('../img/header.jpg', rgba($color: v.$negro, $alpha: .1));
+}
+
+.webp .header {
+    @include m.bgFondo('../img/header.webp', rgba($color: v.$negro, $alpha: .1));
+}
+
+.avif .header {
+    @include m.bgFondo('../img/header.avif', rgba($color: v.$negro, $alpha: .1));
+}
+
+.header {
+    @include m.bgPropiedades();
+    padding: 5rem 0 10rem 0;
+    &__busqueda {
+        display: grid;
+        place-items: center;
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 10rem;
+        }
+    }
+    &__busqueda-label {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__busqueda_boton {
+        @include m.boton(v.$blanco, v.$primario);
+    }
+}
+
+.barra {
+    display: none;
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: v.$blanco;
+    }
+    &__heading {
+        @include m.degradadoTXT(v.$blanco, v.$primario);
+        margin: 0;
+    }
+    &__link {
+        color: v.$blanco;
+        margin-right: 1.5rem;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

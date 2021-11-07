@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBNB - BEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300,400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+    <!-- Meta -->
+    <meta name="keywords" content="AirBNB, prueba, experiencia, practica">
+    <meta name="description" content="Esta es una pagina para lugares turisticos">
+    <meta name="author" content="Luis Villa">
+    <!-- Preload -->
+    <link rel="preload" href="build/css/app.css" as="style">
+    <!-- CSS -->
+    <link rel="stylesheet" href="build/css/app.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="barra contenedor">
+            <div class="barra__logo">
+                <h1 class="barra__heading">Viajes</h1>
+            </div>
+            <nav class="barra__nav">
+                <a href="#" class="barra__link">Lugares para hospedarte </a>
+                <a href="#" class="barra__link">Experiencias</a>
+                <a href="#" class="barra__link">Experiencias en linea</a>
+            </nav>
+            <nav class="barra__login">
+                <a href="#" class="barra__link">Hasta anfrition</a>
+            </nav>
+        </div>
+        <form class="formulario contenedor">
+            <div class="formulario__campo">
+                <label class="formulario__label" for="ubicacion">Ubicacion</label>
+                <input class="formulario__input" type="text" placeholder="¿A donde viajas?" id="ubicacion">
+            </div>
+            <div class="formulario__campo">
+                <label class="formulario__label" for="Llegada">Llegada</label>
+                <input class="formulario__input" type="date" name="" id="Llegada">
+            </div>
+            <div class="formulario__campo">
+                <label class="formulario__label" for="Salida">Salida</label>
+                <input class="formulario__input" type="date" id="Salida">
+            </div>
+            <div class="formulario__campo">
+                <label class="formulario__label" for="Huespedes">Huespedes</label>
+                <input class="formulario__input" type="number" id="Huespedes" placeholder="¿Cuantos?">
+            </div>
+            <div class="formulario__campo">
+                <input type="submit" value="Buscar" class="formulario__boton">
+            </div>
+        </form>
+        <div class="header__busqueda contenedor">
+            <p class="header__busqueda-label">¿No sabes a donde ir?</p>
+            <a href="#" class="header__busqueda_boton">Busqueda Flexible</a>
+        </div>
+    </header>
+    <section class="alojamientos contenedor">
+        <h2>Descubre los alojamientos populares</h2>
+        <div class="alojamientos__grid">
+            <div class="alojamiento">
+                <div class="alojamiento__imagen">
+                    <picture>
+                        <source srcset="build/img/icono_destino_1.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_1.webp" type="image/webp">
+                        <img loading="build/lazy" src="img/icono_destino_1.png" alt="alojamiento">
+                    </picture>
+                </div>
+                <div class="alojamiento__contenido">
+                    <h3 class="alojamiento__heading">New York</h3>
+                    <p class="alojamiento__descripcion">4 Horas en avión</p>
+                </div>
+            </div>
+            <div class="alojamiento">
+                <div class="alojamiento__imagen">
+                    <picture>
+                        <source srcset="build/img/icono_destino_2.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_2.webp" type="image/webp">
+                        <img loading="build/lazy" src="img/icono_destino_2.png" alt="alojamiento">
+                    </picture>
+                </div>
+                <div class="alojamiento__contenido">
+                    <h3 class="alojamiento__heading">Paris</h3>
+                    <p class="alojamiento__descripcion">4 Horas en avión</p>
+                </div>
+            </div>
+            <div class="alojamiento">
+                <div class="alojamiento__imagen">
+                    <picture>
+                        <source srcset="build/img/icono_destino_3.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_3.webp" type="image/webp">
+                        <img loading="build/lazy" src="img/icono_destino_3.png" alt="alojamiento">
+                    </picture>
+                </div>
+                <div class="alojamiento__contenido">
+                    <h3 class="alojamiento__heading">San Francisco</h3>
+                    <p class="alojamiento__descripcion">4 Horas en avión</p>
+                </div>
+            </div>
+            <div class="alojamiento">
+                <div class="alojamiento__contenedor-imagen">
+                    <picture>
+                        <source srcset="build/img/icono_destino_4.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_4.webp" type="image/webp">
+                        <img loading="build/lazy" src="img/icono_destino_4.png" alt="alojamiento" class="alojamiento__imagen">
+                    </picture>
+                </div>
+                <div class="alojamiento__contenido">
+                    <h3 class="alojamiento__heading">Egipto</h3>
+                    <p class="alojamiento__descripcion">4 Horas en avión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js.js"></script>
+
+</html>

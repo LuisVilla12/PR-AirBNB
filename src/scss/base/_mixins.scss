@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 1rem 2rem;
+    color: $colorTexto;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    @include tablet {
+        display: inline-block;
+    }
+}
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin bgFondo($url, $color) {
+    background-image: url($url);
+    background-image: linear-gradient($color 0%, $color 100%), url($url);
+}
+
+@mixin bgPropiedades() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@mixin degradadoTXT($colorInicio, $colorFin) {
+    color: transparent;
+    background: linear-gradient(to right, $colorInicio 0%, $colorFin 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
