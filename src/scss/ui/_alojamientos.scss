@@ -3,11 +3,11 @@
 .alojamientos {
     padding: 5rem 0;
     &__grid {
-        @include m.telefono {
+        @include m.tablet {
             @include m.grid(2, 2rem);
         }
         @include m.desktop {
-            @include m.grid(4, 3rem);
+            @include m.grid(4, 2rem);
         }
     }
 }
@@ -31,9 +31,10 @@
     }
     &__contenido {
         text-align: center;
-        padding: 2rem 0;
+        padding: 2rem;
         @include m.desktop {
             text-align: left;
+            padding: 2rem 1rem;
         }
     }
     &__heading,
