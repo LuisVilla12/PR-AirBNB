@@ -57,3 +57,12 @@
     background-clip: text;
     -webkit-background-clip: text;
 }
+
+@mixin efectoScrollHorizontal {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    >* {
+        scroll-snap-align: center;
+    }
+}
