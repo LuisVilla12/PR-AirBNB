@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+//TODO: Hacer el css de experiencias el contenedor general
+.experiencias {
+    &__contenido {
+        padding-bottom: 10rem;
+        display: grid;
+        grid-template-columns: repeat(3, 30rem);
+        column-gap: 3rem;
+        @include m.efectoScrollHorizontal();
+        @include m.tablet {
+            padding-bottom: 13rem;
+            @include m.grid(3, 1fr);
+            overflow-x: hidden;
+        }
+    }
+}
+
+.experiencia {
+    border-radius: 1rem;
+    &__nombre {
+        font-weight: 700;
+        text-align: center;
+    }
+}
