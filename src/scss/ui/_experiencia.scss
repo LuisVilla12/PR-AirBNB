@@ -3,13 +3,11 @@
 //TODO: Hacer el css de experiencias el contenedor general
 .experiencias {
     &__contenido {
-        padding-bottom: 10rem;
         display: grid;
         grid-template-columns: repeat(3, 30rem);
         column-gap: 3rem;
         @include m.efectoScrollHorizontal();
         @include m.tablet {
-            padding-bottom: 13rem;
             @include m.grid(3, 1fr);
             overflow-x: hidden;
         }
@@ -21,5 +19,10 @@
     &__nombre {
         font-weight: 700;
         text-align: center;
+    }
+    &__img {
+        border-radius: 1rem;
+        max-height: 25rem;
+        margin: 0 auto;
     }
 }
